@@ -1,0 +1,45 @@
+.user-information-layout {
+    &__container {
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 140px;
+    }
+    &__outlet-container {
+        background-color: $user-page-primary;
+        width: 100%;
+        max-height: 80vh;
+        border-radius: 10px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 30px 20px;
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $secondary;
+            outline: 1px solid $secondary;
+            border-radius: 20px;
+        }
+    }
+}
+
+@include tablet {
+    .user-information-layout {
+        &__container {
+            padding-left: 60px;
+            padding-right: 60px;
+            padding-top: 180px;
+        }
+    }
+}
+
+@include tablet-mini {
+    .user-information-layout {
+        &__container {
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 180px;
+        }
+    }
+}

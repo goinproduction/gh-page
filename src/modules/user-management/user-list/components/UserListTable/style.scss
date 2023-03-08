@@ -1,0 +1,87 @@
+.admin-user-list {
+    .ant-table-thead > tr > th {
+        border-bottom: 0;
+        background-color: black;
+        color: white;
+    }
+    .ant-table-tbody > tr > td {
+        background-color: $admin-menu-background;
+        border-bottom: 0;
+    }
+    .ant-table table {
+        border-spacing: 0 10px;
+    }
+    .ant-table-content {
+        background: #292929;
+    }
+    .ant-table-cell.ant-table-cell-row-hover {
+        background-color: #222020 !important;
+    }
+    &__button {
+        background: transparent;
+        font-size: 20px;
+    }
+    .ant-table-tbody > tr.ant-table-row:hover > td,
+    .ant-table-tbody > tr > td.ant-table-cell-row-hover {
+        background-color: $admin-menu-background;
+    }
+}
+
+.user-item {
+    &__avatar {
+        height: 40px;
+        width: 40px;
+        object-fit: cover;
+        margin-right: 10px;
+        border-radius: 50%;
+    }
+    &__name {
+        font-weight: 500;
+        font-size: 16px;
+        color: white;
+    }
+    &__email {
+        font-size: 14px;
+        color: white;
+    }
+    &__debt {
+        img {
+            height: 20px;
+            width: 20px;
+            object-fit: cover;
+            margin-left: 10px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+.button-checkout {
+    margin-right: 10px;
+    &_disabled {
+        margin-right: 10px;
+        &:hover {
+            background-color: none !important;
+        }
+    }
+    &:hover {
+        background-color: rgb(236, 236, 89);
+        color: black;
+    }
+}
+
+.button-delete-user {
+    &:hover {
+        background-color: $primary;
+    }
+}
+
+.checkout-option {
+    &__coin {
+        width: 15px;
+        height: 15px;
+        object-fit: cover;
+        margin-bottom: 2px;
+    }
+}

@@ -1,0 +1,30 @@
+.match-list {
+    padding: 24px 48px 24px 48px;
+    color: rgb(255, 255, 255);
+    background: #292929 !important;
+    min-height: 532px;
+    border-radius: 5px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    transition: 0.5s;
+    animation: fade-bump 0.5s ease-out;
+}
+
+@include tablet {
+    .match-list {
+        padding: 24px 24px 24px 24px;
+        border: 2px solid $secondary;
+        min-height: 452px;
+        &:hover {
+            filter: initial;
+        }
+    }
+}
+
+@include mobile {
+    .match-list {
+        padding: 24px 12px 24px 12px;
+        min-height: 516px;
+    }
+}

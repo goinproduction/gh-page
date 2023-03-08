@@ -1,0 +1,155 @@
+.banner{
+    margin-top: 100px;
+    padding: 0 10px;
+    border-radius: 12px;
+    background: radial-gradient(73.55% 899.23% at 21.72% 75.41%, #B0372B 0%, rgba(0, 0, 0, 0.87) 83.93%);
+    &__image{
+        width: calc(60% + 100px);
+        margin: 0 auto;
+        display: block;
+    }
+    &__title{
+        font-size: 3rem;
+        font-weight: bold;
+    }
+    &__description{
+        color: #eee;
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin-top: 10px;
+    }
+}
+.home-page{
+    max-width: 1900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+.rules{
+    border-radius: 8px;
+    padding: 20px;
+    padding-bottom: 0;
+    margin-top: 50px;
+    &__title{
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 20px 0;
+    }
+    p, li{
+        color: white;
+        font-size: 1.1rem;
+        max-width: 400px;
+    }
+    li{
+        margin-left: 12px;
+    }
+    &__block{
+        margin-right: 20px;
+        padding: 10px;
+        border-radius: 4px;
+        &_home{
+            background-color: $team-home-primary;
+        }
+        &_draw{
+            background-color: #464646;
+        }
+        &_away{
+            background-color: $team-away-primary;
+        }
+    }
+    &__meme{
+        width: calc(60% + 100px);
+    }
+}
+.term {
+    border-radius: 6px;
+    &__title{
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+}
+.definition {
+    border-radius: 6px;
+    height: 100%;
+    &__title{
+        font-weight: bold;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+    p, li {
+        color: white;
+    }
+    h5 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
+@include tablet{
+    .banner{
+        margin-top: 140px;
+        padding: 15px;
+        padding-top: 20px;
+        &__title{
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        &__description{
+            color: #eee;
+            font-size: 1rem;
+            max-width: 700px;
+            margin-top: 10px;
+        }
+        &__image{
+            margin: 0 auto;
+            display: block;
+        }
+    }
+    .rules{
+        flex-wrap: wrap;
+        &__title{
+            font-size: 1.2rem;
+        }
+        p, li{
+            color: white;
+            font-size: 1rem;
+            max-width: 400px;
+        }
+    }
+}
+@include desktop-mini {
+    .rules {
+        &__meme{
+            display: none;
+        }
+    }
+}
+@include tablet-mini {
+    .home-page{
+        .league{
+            &-item{
+                display: flex;
+                padding: 20px;
+                border-radius: 4px;
+                align-items: center;
+                overflow: hidden;
+                border: 0;
+                p{
+                    color: white;
+                    font-size: 15px;
+                    margin-left: 8px;
+                }
+            }
+            &-logo{
+                width: 50px;
+                height: auto;
+            }
+        }
+    }
+}

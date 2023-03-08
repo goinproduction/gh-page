@@ -1,0 +1,114 @@
+.user-menu {
+    background-color: $user-page-primary;
+    // height: calc(100vh - 170px);
+    padding-bottom: 0px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    p{
+        color: $light;
+    }
+    &__avatar-background {
+        width: 100%;
+        height: 105px;
+        background: #000000;
+        margin-bottom: 85px;
+        left: 0;
+        top: 0;
+        z-index: 3;
+        position: relative;
+    }
+    &__avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin: 0 auto;
+        display: block;
+        border: 6px solid #434343;
+        background-color: $user-page-primary;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    &__name {
+        text-align: center;
+        font-size: 1.2rem;
+        font-family: sans-serif;
+    }
+    &__item {
+        padding: 10px 20px;
+        background-color: #312e2e;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        transition: 0.5s;
+        &:hover {
+            background-color: #434343;
+            cursor: pointer;
+        }
+    }
+    &__item-title {
+        font-size: 1.05rem;
+        color: silver;
+    }
+    .ant-menu.ant-menu-dark {
+        background-color: #222020;
+        padding: 20px;
+    }
+    .ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+        background-color: $secondary;
+    }
+    .ant-menu .ant-menu-item {
+        &:hover {
+            background-color: $dark;
+        }
+    }
+}
+.user-information-form {
+    .ant-input-number-input {
+        width: 100%;
+    }
+    .ant-input-number-lg {
+        width: 100%;
+    }
+    .ant-upload-list-picture-card-container {
+        width: 300px;
+        height: 300px;
+        .image-uploaded {
+            width: 300px;
+            height: 300px;
+        }
+    }
+    .ant-upload-list {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.upload-avatar {
+    .ant-upload.ant-upload-select-picture-card {
+        background-color: #222020;
+        border-color: grey;
+        width: 300px;
+        height: 300px;
+    }
+    .ant-upload.ant-upload-select-picture-card {
+        width: 300px;
+        height: 300px;
+    }
+}
+.update-avatar-form {
+    .ant-form-item-label > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+        display: none;
+    }
+    .ant-upload-picture-card-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    .ant-upload.ant-upload-select-picture-card {
+        width: 300px;
+        height: 300px;
+        border-color: grey;
+    }
+    .ant-upload.ant-upload-select-picture-card > .ant-upload {
+        background-color: #222020;
+        overflow: hidden;
+    }
+}

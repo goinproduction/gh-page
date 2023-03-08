@@ -1,0 +1,14 @@
+.admin-overview{
+    padding: 30px;
+    &__box{
+        background-color: $admin-menu-background;
+        border-radius: 8px;
+        padding: 20px 30px;
+        h1{
+            margin-top: 10px;
+            i{
+                font-size: 40px;
+            }
+        }
+    }
+}

@@ -1,0 +1,1 @@
+This folder for OSDBB web - Front-end side

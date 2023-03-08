@@ -1,0 +1,188 @@
+.loading {
+  &__container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+  }
+  &__icon {
+    color: white;
+    font-size: 25px;
+  }
+}
+
+.main-grid {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  width: 100%;
+}
+.rounded {
+  border-radius: 8px;
+}
+.left-icon {
+  margin-right: 8px;
+}
+.ant-input[disabled] {
+  opacity: 0.8;
+}
+
+.image-uploaded {
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+}
+.spin {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .ant-spin {
+    span {
+      color: $secondary;
+    }
+  }
+}
+.ant-picker-prev-icon,
+.ant-picker-next-icon,
+.ant-picker-super-prev-icon,
+.ant-picker-super-next-icon {
+  color: black;
+}
+.ant-btn.ant-btn-primary.ant-btn-sm span {
+  color: black;
+}
+.ant-modal-content {
+  .ant-modal-close-x {
+    span {
+      color: $primary;
+    }
+  }
+  .ant-modal-footer {
+    .ant-btn {
+      span {
+        color: black;
+      }
+    }
+    .ant-btn-primary {
+      border-color: $secondary;
+      background: $secondary;
+    }
+  }
+}
+.modal-delete {
+  .ant-modal-body {
+    padding-bottom: 12px;
+  }
+  .ant-divider-horizontal {
+    margin-bottom: 12px;
+    margin-top: 24px;
+  }
+}
+.ant-ribbon-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.ant-select-selector {
+  span {
+    color: $dark;
+  }
+}
+.upload-icon {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: grey;
+}
+
+.ant-notification-notice-close {
+  span {
+    color: #000;
+  }
+}
+
+.modal-delete {
+  .ant-modal-close-x {
+    display: none;
+  }
+}
+
+.ant-modal-confirm-body-wrapper {
+  .ant-modal-confirm-btns {
+    .ant-btn-primary {
+      background-color: $secondary;
+      border-color: $secondary;
+    }
+    .ant-btn-default {
+      &:hover {
+        border-color: $secondary;
+      }
+    }
+  }
+}
+
+.ant-pagination-next,
+.ant-pagination-prev {
+  button {
+    &:hover {
+      span {
+        color: #fff !important;
+      }
+    }
+  }
+}
+
+.document {
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 100px;
+}
+
+.document-content {
+  background-color: $light;
+  min-height: 100vh;
+  border-radius: 10px;
+  width: 100%;
+  padding: 3%;
+  h1 {
+    font-size: 30px;
+    color: $dark;
+  }
+  h2 {
+    font-size: 20px;
+    color: $dark;
+  }
+  p {
+    color: $dark;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  span {
+    color: $dark;
+  }
+}
+
+@include tablet {
+  .document {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 100px;
+  }
+}
+
+@include mobile {
+  .document-content {
+    h1 {
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}

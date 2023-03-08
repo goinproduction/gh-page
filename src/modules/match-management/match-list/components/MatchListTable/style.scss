@@ -1,0 +1,56 @@
+.admin-match{
+    padding: 40px;
+    .ant-table-thead > tr > th{
+        border-bottom: 0;
+        background-color: black;
+        color: white;
+    }
+    .ant-table-tbody > tr > td{
+        background-color: $admin-menu-background;
+        border-bottom: 0;
+    }
+    .ant-table table{
+        border-spacing: 0 10px;
+    }
+    .ant-table-content{
+        background: #292929;
+    }
+    .ant-table-cell.ant-table-cell-row-hover{
+        background-color: #222020 !important;
+    }
+    .ant-table-row:hover .ant-table-cell{
+        background-color: #222020 !important;
+    }
+    &__score{
+        color: white;
+        font-size: 30px;
+    }
+    &__handicap {
+        color: $secondary;
+    }
+    &__team-logo{
+        height: 50px;
+        margin: 0 10px;
+    }
+    &__bet-amount{
+        img{
+            width: 20px;
+            height: 20px;
+            object-fit: cover;
+        }
+        p{
+            font-size: 17px;
+        }
+    }
+    &__button{
+        background: transparent;
+        font-size: 20px;
+    }
+}
+@include tablet {
+    .match-table{
+        &__status, &__date{
+            display: none;
+        }
+    }
+}

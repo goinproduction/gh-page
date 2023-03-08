@@ -1,0 +1,122 @@
+.user-betted-statistic-content {
+    padding: 120px;
+    min-height: 100vh;
+    .ant-ribbon {
+        height: 30px;
+        line-height: 30px;
+    }
+    .ant-empty-description {
+        color: $light;
+    }
+}
+
+.card-betted-statistic {
+    height: 150px;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    text-align: center;
+    &__title {
+        color: $dark;
+        font-size: 1.5rem;
+    }
+    &__number {
+        color: $dark;
+        font-size: 2rem;
+        &_debt {
+            img {
+                width: 30px !important;
+                height: 30px !important;
+                margin-left: 5px;
+            }
+        }
+    }
+    img {
+        left: 0;
+        top: 0;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+    &_win {
+        background-color: $match-win-color;
+    }
+    &_lose {
+        background-color: $match-lose-color;
+    }
+    &_rate {
+        background-color: rgb(189, 189, 28);
+    }
+    &_debt {
+        background-color: $secondary;
+    }
+}
+
+@include desktop-mini {
+    .user-betted-statistic-content {
+        padding: 50px;
+        padding-top: 120px;
+    }
+}
+
+@include tablet {
+    .user-betted-statistic-content {
+        padding: 40px;
+        padding-top: 160px;
+    }
+    .card-betted-statistic {
+        height: 120px;
+        border-radius: 15px;
+        &__title {
+            font-size: 1rem;
+        }
+        img {
+            width: 70px;
+            height: 70px;
+        }
+        &__number {
+            font-size: 1.5rem;
+            &_debt {
+                img {
+                    width: 30px !important;
+                    height: 30px !important;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .user-betted-statistic-content {
+        padding: 30px;
+        padding-top: 160px;
+        .ant-ribbon {
+            height: 20px;
+            line-height: 20px;
+        }
+    }
+    .card-betted-statistic {
+        height: 80px;
+        border-radius: 10px;
+        &__title {
+            font-size: 0.7rem;
+        }
+        img {
+            width: 50px;
+            height: 50px;
+        }
+        &__number {
+            font-size: 1rem;
+            &_debt {
+                img {
+                    width: 15px !important;
+                    height: 15px !important;
+                    margin-left: 3px;
+                }
+            }
+        }
+    }
+}

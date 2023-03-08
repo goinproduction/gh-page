@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+@import './abstracts/mixins';
+@import './abstracts/variables';
+@import './abstracts/functions';
+@import './base/animations';
+@import "./base/base";
+@import "./base/common";
+@import "./base/utilities.scss";
+
+//Component
+@import '../components/Button/style';
+@import '../components/Header/style';
+@import '../components/Footer/style';
+
+//Pages
+@import '../pages/LoginLayout/style.scss';
+@import '../pages/NotFound/style.scss';
+@import '../pages/Match/style.scss';
+@import '../pages/UserInformationLayout/style.scss';
+@import '../pages/Admin/style.scss';
+@import '../pages/Home/style.scss';
+
+//Component module filter
+@import '../modules/league-list/components/SidebarFilter/styles.scss';
+@import '../modules/league-list/components/LeagueList/styles.scss';
+
+//Component module match list
+@import '../modules/match-management/match-list/components/MatchItem/style.scss';
+@import '../modules/match-management/match-list/components/MatchListTable/style.scss';
+@import '../modules/match-management/match-list/components//MatchList//style.scss';
+
+//Component module match-detail
+@import '../modules/match-management/match-detail/components/MatchDetail/style.scss';
+
+//Component module user-information
+@import '../modules/user-management/user-information/components/MenuUserInformation/style.scss';
+
+//Component module user-betted-Statistic
+@import '../modules/user-management/user-betted-statistic/components/UserBettedStatisticContent/style.scss';
+@import '../modules/user-management/user-betted-statistic/components/UserBettedStatisticList/style.scss';
+@import '../modules/user-management/user-betted-statistic/components/UserBettedStatisticMatchItem/style.scss';
+
+//Component module admin
+@import '../modules/admin/components/MenuBar/style.scss';
+@import '../modules/admin/components/Overview/style.scss';
+
+//Component module add-match
+@import '../modules/match-management/modals/components/AddMatchModal/styles.scss';
+//Component module user-list
+@import '../modules/user-management/user-list/components/UserListTable/style.scss';
+@import '../modules/user-management/user-list/components/UserListContent/style.scss';
+
+//Component module team-list
+@import '../modules/team-management/team-list/components/TeamListContent/style.scss';

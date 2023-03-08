@@ -1,0 +1,159 @@
+.statistic-match {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    background: rgb(55, 55, 55);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    color: $light;
+    height: 150px;
+    &__link {
+        position: absolute;
+        z-index: 9;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    &__container-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        padding: 0px 10px;
+        &_team {
+            justify-content: space-around;
+        }
+    }
+    &__text-item {
+        font-size: 16px;
+        .ant-tag {
+            margin: 0;
+            padding: 5px 10px;
+        }
+    }
+    &__team-logo {
+        height: 50px;
+        width: 50px;
+        object-fit: cover;
+    }
+    &__small-logo {
+        height: 20px;
+        width: 20px;
+        object-fit: cover;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    &__team-name {
+        font-size: 16px;
+    }
+    &__score-main {
+        font-size: 34px;
+    }
+    &__score-handicap {
+        font-size: 16px;
+        color: $secondary;
+    }
+}
+
+@include desktop-mini {
+    .statistic-match {
+        &__text-item {
+            font-size: 14px;
+        }
+    }
+}
+
+@include tablet {
+    .statistic-match {
+        height: 130px;
+        &__text-item {
+            font-size: 16px;
+            .ant-tag {
+                margin: 0;
+                padding: 3px 6px;
+                font-size: 10px;
+            }
+        }
+        &__team-name {
+            font-size: 14px;
+        }
+        &__score-main {
+            font-size: 30px;
+        }
+        &__score-handicap {
+            font-size: 14px;
+        }
+        &__small-logo {
+            height: 15px;
+            width: 15px;
+        }
+    }
+}
+
+@include tablet-mini {
+    .statistic-match {
+        &__text-item {
+            font-size: 14px;
+            .ant-tag {
+                margin: 0;
+                padding: 2px 4px;
+                font-size: 8px;
+            }
+        }
+        &__team-name {
+            font-size: 10px;
+        }
+        &__team-logo {
+            height: 40px;
+            width: 40px;
+        }
+        &__score-main {
+            font-size: 20px;
+        }
+        &__score-handicap {
+            font-size: 12px;
+        }
+        &__small-logo {
+            height: 12px;
+            width: 12px;
+        }
+    }
+}
+
+@include mobile {
+    .statistic-match {
+        margin-top: 15px;
+        height: 100px;
+        padding: 20px 10px;
+        &__text-item {
+            font-size: 10px;
+            .ant-tag {
+                margin: 0;
+                padding: 0px 2px;
+                font-size: 6px;
+            }
+        }
+        &__team-name {
+            font-size: 10px;
+        }
+        &__team-logo {
+            height: 30px;
+            width: 30px;
+        }
+        &__score-main {
+            font-size: 16px;
+        }
+        &__score-handicap {
+            font-size: 6px;
+        }
+        &__small-logo {
+            height: 8px;
+            width: 8px;
+            margin-left: 3px;
+            margin-right: 3px;
+        }
+    }
+}

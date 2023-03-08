@@ -1,0 +1,39 @@
+.statistic-list {
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    background: rgb(55, 55, 55);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    &__title {
+        color: white;
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+
+@include desktop-mini {
+    .statistic-list {
+        &__title {
+            font-size: 14px;
+        }
+    }
+}
+
+@include tablet-mini {
+    .statistic-list {
+        &__title {
+            font-size: 12px;
+        }
+    }
+}
+
+@include mobile {
+    .statistic-list {
+        padding: 20px 10px;
+        &__title {
+            font-size: 8px;
+        }
+    }
+}

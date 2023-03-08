@@ -1,0 +1,85 @@
+.add-match-form{
+    .ant-input, 
+    .ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input, .ant-input-status-error:not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover,
+    .ant-select-status-error.ant-select:not(.ant-select-disabled):not(.ant-select-customize-input) .ant-select-selector,
+    .ant-select:not(.ant-select-customize-input) .ant-select-selector,
+    .ant-input-number-status-error:not(.ant-input-number-disabled):not(.ant-input-number-borderless).ant-input-number, .ant-input-number-status-error:not(.ant-input-number-disabled):not(.ant-input-number-borderless).ant-input-number:hover,
+    .ant-input-number,
+    .ant-input-number-affix-wrapper-status-error:not(.ant-input-number-affix-wrapper-disabled):not(.ant-input-number-affix-wrapper-borderless).ant-input-number-affix-wrapper, .ant-input-number-affix-wrapper-status-error:not(.ant-input-number-affix-wrapper-disabled):not(.ant-input-number-affix-wrapper-borderless).ant-input-number-affix-wrapper:hover,
+    .ant-input-number-affix-wrapper
+    {
+        width: 100%;
+    }
+    .ant-picker-status-error.ant-picker-focused, .ant-picker-status-error.ant-picker:focus,
+    .ant-picker-large{
+        width: 50%;
+    }
+    .ant-select-multiple .ant-select-selection-placeholder,
+    .ant-select-selection-placeholder{
+        color: silver;
+    }
+    .ant-divider-horizontal.ant-divider-with-text {
+        margin-top: 0;
+    }
+    &__label{
+        color: black;
+        margin-bottom: 0;
+    }
+    &__title{
+        color: black;
+        margin: 10px 0;
+    }
+    &__button{
+        width: 50%;
+    }
+}
+.option{
+    &__avatar{
+        width: 20px;
+        height: 20px;
+    }
+    &__title{
+        margin-bottom: 0;
+    }
+}
+.modal-edit {
+    .match-info {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__score {
+            font-size: 30px;
+            margin: 0 5px;
+        }
+        p {
+            font-size: 20px;
+            margin-top: 6px;
+            font-weight: bold;
+            text-align: center;
+            max-width: 200px;
+        }
+    }
+}
+.team-pagination{
+    padding: 10px 15px;
+    border-top: 1px solid #eee;
+    button{
+        margin-left: 8px;
+        float: right;
+    }
+}
+.ant-table {
+    .ant-empty-description {
+        color: silver;
+    }
+    .ant-table-tbody > tr.ant-table-placeholder:hover > td {
+        background-color: #222020;
+    }
+    .ant-empty-img-simple-path {
+        fill: #212121;
+    }
+    .ant-empty-img-simple-ellipse {
+        fill: #434343;
+    }
+}

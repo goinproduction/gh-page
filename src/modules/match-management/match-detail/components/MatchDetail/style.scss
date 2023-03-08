@@ -1,0 +1,1066 @@
+.bet-page-content {
+    padding: 20px;
+    padding-top: 90px;
+    &__basic-info {
+        padding-bottom: 20px;
+    }
+    &__match {
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+    }
+    &__spin {
+        height: 100vh;
+    }
+    &__empty {
+        .ant-empty {
+            margin-top: 20%;
+            margin-bottom: 20%;
+            .ant-empty-description {
+                color: $light;
+            }
+        }
+    }
+}
+
+.basic-match-info {
+    animation: fade-bump 0.75s ease-in-out;
+    &__name {
+        font-size: 2rem;
+        color: $light;
+        text-align: center;
+        margin: 0px;
+        &_home {
+            color: $team-home-primary;
+        }
+        &_away {
+            color: $team-away-primary;
+        }
+    }
+    &__time {
+        font-size: 1.5rem;
+        color: $light;
+        text-align: center;
+        margin: 0px;
+    }
+}
+
+.match-bet {
+    display: flex;
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    box-shadow: 0 0 20px 8px rgba(17, 17, 17, 0.5);
+    border-radius: 20px;
+    &__league {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 70%;
+        z-index: 3;
+        padding: 8px 16px;
+        border-radius: 0 0 15px 15px;
+        background: rgba($dark, 0.2);
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: #ddd;
+    }
+    &__league-icon {
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+        position: relative;
+        display: block;
+        img {
+            height: 100%;
+            width: auto;
+            opacity: 0.7;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        height: 780px;
+        flex: 1 1 348px;
+        background-image: linear-gradient(180deg, #7d984f, #244455);
+        border-radius: 20px;
+    }
+    &__header-item {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        color: $light;
+        max-width: 850px;
+        margin: 70px 0 5px 0;
+        justify-content: center;
+    }
+    &__bet-line {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0px;
+    }
+    &__bet-line-break {
+        display: flex;
+        width: 100%;
+        max-width: 100%;
+        align-items: flex-end;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        font-weight: 500;
+        color: $light;
+        justify-content: space-evenly;
+        margin-top: 50px;
+        animation: move-in-bottom 0.3s ease-in 1.35s;
+        animation-fill-mode: backwards;
+    }
+    &__bet-line-break-item {
+        display: flex;
+        flex: 1 1 33%;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        .team-choose__flex-container_home {
+            &:hover {
+                background: $team-home-primary;
+                filter: drop-shadow(0 0 30px $team-home-primary);
+                span {
+                    color: $dark;
+                }
+            }
+        }
+        .team-choose__flex-container_draw {
+            &:hover {
+                background: #313131;
+                filter: drop-shadow(0 0 30px #c5c5c5);
+                span {
+                    color: $light;
+                }
+            }
+        }
+        .team-choose__flex-container_away {
+            &:hover {
+                background: $team-away-primary;
+                filter: drop-shadow(0 0 30px $team-away-primary);
+                span {
+                    color: $dark;
+                }
+            }
+        }
+    }
+    &__footer {
+        width: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        max-width: 1250px;
+        margin: 25px 0 0;
+    }
+    &__winning-rate {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        justify-content: center;
+    }
+    &__winning-rate-progress-bar {
+        position: relative;
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+        flex: 0 0 666px;
+        background-color: rgba($team-away-primary, 1);
+        height: 12px;
+        border-radius: 8px;
+        &_value {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            background-color: rgba($team-home-primary, 1);
+            border-top-left-radius: 8px;
+            border-bottom-left-radius: 8px;
+            &::after {
+                position: absolute;
+                background-color: $light;
+                content: "";
+                height: 16px;
+                width: 2px;
+                top: 50%;
+                right: 0;
+                transform: translate(50%, -50%);
+                box-shadow: 0 0 4px 0 $light;
+                border-radius: 8px;
+            }
+        }
+    }
+    &__bet-action {
+        display: flex;
+        justify-content: center;
+        margin: 30px 0 5px 0;
+    }
+    &__bet-amount {
+        width: 200px;
+        height: 80px;
+        border-radius: 15px;
+        background-color: rgba($light, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: move-in-bottom 0.3s ease-in 1.65s;
+        animation-fill-mode: backwards;
+        span {
+            font-size: 35px;
+            font-family: Chivo, system-ui, BlinkMacSystemFont, -apple-system, Fira Sans, Droid Sans, Helvetica Neue,
+                sans-serif;
+        }
+        img {
+            height: 40px;
+            width: 40px;
+            object-fit: cover;
+            margin-left: 20px;
+        }
+    }
+}
+
+.bet-countdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Chivo, system-ui, BlinkMacSystemFont, -apple-system, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-style: italic;
+    &__title {
+        font-size: 1.75rem;
+        text-transform: uppercase;
+        line-height: 1;
+        color: $light;
+    }
+    &__time {
+        margin-top: 5px;
+        span {
+            font-size: 2.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-top: 10px;
+        }
+    }
+}
+
+.bet-handicap {
+    margin: 20px 0 50px 0;
+    justify-content: center;
+    animation: move-in-top 0.3s ease-in 1.05s;
+    animation-fill-mode: backwards;
+    &__score {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background: $secondary;
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+        span {
+            color: $dark;
+        }
+    }
+    &__title {
+        font-size: 1.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 1;
+        margin: 0 45px;
+        padding: 10px;
+        border-radius: 10px;
+        background: rgba($secondary, 1);
+        span {
+            color: $dark;
+        }
+    }
+}
+
+.bet-team {
+    display: flex;
+    align-items: center;
+    flex: 1 1 50%;
+    position: relative;
+    z-index: 5;
+    height: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    max-height: 200px;
+    min-height: 200px;
+    background-color: $light;
+    transition: all 0.3s;
+    justify-content: flex-end;
+    cursor: pointer;
+    padding-top: 10px;
+    &_home {
+        border-left: none !important;
+        border: 2px solid $team-home-primary;
+        filter: drop-shadow(0 0 15px $team-home-primary);
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+        animation: team-home-in 0.75s ease-in;
+        margin-left: -20px;
+        padding-left: 25px;
+        &::after {
+            position: absolute;
+            display: block;
+            height: 0;
+            width: 0;
+            border-radius: 4px;
+            content: "";
+            top: 0;
+            border-style: solid;
+            left: calc(100% - 1px);
+            border-color: transparent transparent transparent $light;
+            filter: drop-shadow(2px 0 0 $team-home-primary);
+            border-width: 98px 0 98px 40px;
+        }
+        &:hover {
+            filter: drop-shadow(0 0 70px $team-home-primary);
+        }
+    }
+    &_away {
+        border-right: none !important;
+        border: 2px solid $team-away-primary;
+        filter: drop-shadow(0 0 15px $team-away-primary);
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        animation: team-away-in 0.75s ease-in;
+        margin-right: -20px;
+        padding-right: 25px;
+        &::after {
+            position: absolute;
+            display: block;
+            height: 0;
+            width: 0;
+            border-radius: 4px;
+            content: "";
+            top: 0;
+            border-style: solid;
+            right: calc(100% - 1px);
+            border-color: transparent $light transparent transparent;
+            filter: drop-shadow(-2px 0 0 $team-away-primary);
+            border-width: 98px 40px 98px 0;
+        }
+        &:hover {
+            filter: drop-shadow(0 0 70px $team-away-primary);
+        }
+    }
+    &__people {
+        position: absolute;
+        top: 0;
+        margin-top: -22px;
+        z-index: 10;
+        color: $dark;
+        background: transparent;
+        border: none;
+        &_home {
+            left: 41%;
+        }
+        &_away {
+            right: 41%;
+        }
+    }
+    &__button-people {
+        background: $light;
+        width: 80px;
+        height: 40px;
+        cursor: initial;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        transition: all 0.5s;
+        span {
+            padding: 3px;
+        }
+        &_home {
+            border: 1px solid $team-home-primary;
+            span {
+                color: $team-home-primary;
+            }
+        }
+        &_draw {
+            border: 1px solid #313131;
+            span {
+                color: #313131;
+            }
+        }
+        &_away {
+            border: 1px solid $team-away-primary;
+            span {
+                color: $team-away-primary;
+            }
+        }
+    }
+    &__people-number {
+        padding-top: 6px !important;
+    }
+    &__container {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: stretch;
+        padding: 0;
+        max-width: 500px;
+        background: transparent;
+        border: none;
+        &_away {
+            flex-direction: row-reverse;
+        }
+    }
+    &__logo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        flex: 1 1 auto;
+        max-width: 60%;
+        margin-top: -10px;
+    }
+    &__logo {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 120px;
+            height: 120px;
+        }
+        &_away {
+            flex-direction: row-reverse;
+        }
+    }
+    &__score {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 7rem;
+        width: 120px;
+        height: 120px;
+        span {
+            color: $dark;
+        }
+    }
+}
+
+.draw {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(0, 0%, 100%, 0.25);
+    min-width: 250px;
+    height: 140px;
+    flex: 1 0 190px;
+    animation: scale-up 0.5s ease-in;
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 95px;
+        height: 115px;
+        margin: 0 50px;
+    }
+    &__label {
+        position: absolute;
+        font-size: 2rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: $light;
+        top: 45px;
+        background: transparent;
+        border: none;
+        &:hover {
+            filter: drop-shadow(0 0 30px #e7e7e7);
+        }
+    }
+}
+
+.team-choose {
+    &__container {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        max-width: max-content;
+        justify-content: flex-end;
+        background: transparent;
+        border: none;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__flex-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        background-color: $light;
+        width: 150px;
+        height: 60px;
+        transition: all 0.3s;
+        span {
+            font-weight: 500;
+            font-size: 1rem;
+            color: $dark;
+        }
+        &_home {
+            border: 1px solid $team-home-primary;
+        }
+        &_draw {
+            border: 1px solid #313131;
+        }
+        &_away {
+            border: 1px solid $team-away-primary;
+        }
+    }
+}
+
+.bet-active {
+    .team-choose__flex-container_home {
+        background: $team-home-primary;
+        span {
+            color: $dark;
+        }
+    }
+    .team-choose__flex-container_draw {
+        background: #313131;
+        span {
+            color: $light;
+        }
+    }
+    .team-choose__flex-container_away {
+        background: $team-away-primary;
+        span {
+            color: $dark;
+        }
+    }
+}
+
+.bet-status {
+    animation: move-in-top 0.3s ease-in 0.75s;
+    animation-fill-mode: backwards;
+    &__match {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &_live {
+            margin-top: 8px;
+            background: $secondary;
+            padding: 5px 15px 5px 15px;
+            border-radius: 10px;
+            animation: live-text 1.5s ease-in-out infinite;
+            align-items: center;
+            display: flex;
+            span {
+                font-weight: 500;
+                font-size: 1.5rem;
+                padding: 0px 2px;
+            }
+        }
+    }
+    &__match-title {
+        font-size: 1.75rem;
+        text-transform: uppercase;
+        line-height: 1;
+        color: $light;
+        &_in-progress {
+            font-size: 2.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-top: 10px;
+            color: $light;
+            font-family: Chivo, system-ui, BlinkMacSystemFont, -apple-system, Fira Sans, Droid Sans, Helvetica Neue,
+                sans-serif;
+            font-style: italic;
+        }
+        &_ended {
+            font-size: 2.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-top: 10px;
+            color: $primary;
+            font-family: Chivo, system-ui, BlinkMacSystemFont, -apple-system, Fira Sans, Droid Sans, Helvetica Neue,
+                sans-serif;
+        }
+    }
+}
+
+@include tablet {
+    .bet-page-content {
+        padding-top: 130px;
+    }
+    .match-bet {
+        &__content {
+            height: 690px;
+        }
+        &__header-item {
+            max-width: 700px;
+        }
+        &__winning-rate-progress-bar {
+            flex: 0 0 500px;
+            height: 10px;
+        }
+        &__bet-amount {
+            width: 150px;
+            height: 60px;
+            border-radius: 10px;
+            span {
+                font-size: 25px;
+            }
+            img {
+                height: 30px;
+                width: 30px;
+                margin-left: 15px;
+            }
+        }
+    }
+    .bet-countdown {
+        &__title {
+            font-size: 1.5rem;
+        }
+        &__time {
+            span {
+                font-size: 1.75rem;
+            }
+        }
+    }
+    .bet-handicap {
+        margin: 10px 0 50px 0;
+        &__score {
+            width: 40px;
+            height: 40px;
+            font-size: 1.75rem;
+            padding-top: 5px;
+        }
+        &__title {
+            font-size: 1.5rem;
+            margin: 0 35px;
+        }
+    }
+    .bet-team {
+        max-height: 180px;
+        min-height: 180px;
+        &_home {
+            &::after {
+                border-width: 88px 0 88px 40px;
+            }
+        }
+        &_away {
+            &::after {
+                border-width: 88px 40px 88px 0;
+            }
+        }
+        &__people {
+            &_home {
+                left: 35%;
+            }
+            &_away {
+                right: 35%;
+            }
+        }
+        &__button-people {
+            width: 70px;
+            height: 35px;
+            span {
+                padding: 2px;
+            }
+        }
+        &__logo {
+            flex-direction: column;
+            img {
+                width: 90px;
+                height: 90px;
+            }
+        }
+        &__score {
+            font-size: 5rem;
+            width: 90px;
+            height: 90px;
+        }
+    }
+    .draw {
+        min-width: 225px;
+        height: 130px;
+        flex: 1 0 150px;
+        &__label {
+            top: 47px;
+            font-size: 1.5rem;
+        }
+    }
+    .team-choose {
+        &__flex-container {
+            width: 150px;
+            height: 50px;
+        }
+    }
+    .bet-status {
+        &__match {
+            &_live {
+                padding: 5px 10px 5px 10px;
+                border-radius: 10px;
+                span {
+                    font-weight: 500;
+                    font-size: 1.2rem;
+                    padding: 0px 2px;
+                }
+            }
+        }
+        &__match-title {
+            font-size: 1.5rem;
+            &_in-progress {
+                font-size: 1.75rem;
+            }
+            &_ended {
+                font-size: 1.75rem;
+            }
+        }
+    }
+}
+
+@include tablet-mini {
+    .basic-match-info {
+        &__name {
+            font-size: 1.5rem;
+        }
+        &__time {
+            font-size: 1.2rem;
+        }
+    }
+    .match-bet {
+        &__league {
+            font-size: 14px;
+            max-width: 65%;
+            min-width: 65%;
+        }
+        &__league-icon {
+            width: 30px;
+            height: 30px;
+        }
+        &__content {
+            height: 630px;
+        }
+        &__header-item {
+            max-width: 600px;
+        }
+        &__winning-rate-progress-bar {
+            flex: 0 0 400px;
+            height: 10px;
+        }
+        &__footer {
+            margin: 15px 0 0;
+        }
+        &__bet-amount {
+            width: 130px;
+            height: 50px;
+            border-radius: 7px;
+            span {
+                font-size: 22px;
+            }
+            img {
+                height: 25px;
+                width: 25px;
+                margin-left: 15px;
+            }
+        }
+    }
+    .bet-countdown {
+        &__title {
+            font-size: 1.2rem;
+        }
+        &__time {
+            span {
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .bet-handicap {
+        &__score {
+            width: 30px;
+            height: 30px;
+            font-size: 1.5rem;
+            padding-top: 2px;
+            border-radius: 5px;
+        }
+        &__title {
+            padding: 5px;
+            border-radius: 5px;
+            span {
+                font-size: 1.4rem;
+            }
+        }
+    }
+    .bet-team {
+        max-height: 165px;
+        min-height: 165px;
+        &_home {
+            &::after {
+                border-width: 80px 0 80px 40px;
+            }
+        }
+        &_away {
+            &::after {
+                border-width: 80px 40px 80px 0;
+            }
+        }
+        &__people {
+            &_home {
+                left: 40%;
+            }
+            &_away {
+                right: 40%;
+            }
+        }
+        &__button-people {
+            width: 60px;
+            height: 30px;
+            font-size: 1rem;
+            span {
+                padding: 1px;
+            }
+        }
+        &__container {
+            justify-content: center;
+        }
+        &__score {
+            font-size: 4rem;
+            width: 70px;
+            height: 70px;
+        }
+    }
+    .draw {
+        min-width: 150px;
+        height: 125px;
+        flex: 1 0 150px;
+        &__label {
+            top: 50px;
+            font-size: 1rem;
+        }
+    }
+    .team-choose {
+        &__flex-container {
+            width: 120px;
+            height: 50px;
+            span {
+                font-size: 0.8rem;
+            }
+        }
+    }
+    .bet-status {
+        &__match {
+            &_live {
+                padding: 2px 5px 2px 5px;
+                border-radius: 5px;
+                margin-top: -5px;
+                span {
+                    font-weight: 500;
+                    font-size: 0.8rem;
+                    padding: 0px 2px;
+                }
+            }
+        }
+        &__match-title {
+            font-size: 1.2rem;
+            &_in-progress {
+                font-size: 1.5rem;
+            }
+            &_ended {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .basic-match-info {
+        &__name {
+            font-size: 1rem;
+        }
+        &__time {
+            font-size: 0.8rem;
+        }
+    }
+    .match-bet {
+        &__league {
+            font-size: 10px;
+            max-width: 80%;
+            min-width: 80%;
+        }
+        &__league-icon {
+            height: 25px;
+            width: 25px;
+            margin-right: 0;
+        }
+        &__content {
+            height: 455px;
+        }
+        &__header-item {
+            max-width: 300px;
+        }
+        &__bet-line {
+            margin-top: -20px;
+        }
+        &__bet-line-break {
+            margin-top: 25px;
+            padding: 0;
+        }
+        &__footer {
+            margin: 10px 0 0;
+        }
+        &__winning-rate-progress-bar {
+            flex: 0 0 200px;
+            height: 8px;
+        }
+        &__bet-action {
+            margin: 20px 0 5px 0;
+        }
+        &__bet-amount {
+            width: 120px;
+            height: 40px;
+            border-radius: 7px;
+            span {
+                font-size: 18px;
+            }
+            img {
+                height: 20px;
+                width: 20px;
+                margin-left: 10px;
+            }
+        }
+    }
+    .bet-countdown {
+        &__title {
+            font-size: 0.8rem;
+        }
+        &__time {
+            span {
+                font-size: 1rem;
+            }
+        }
+    }
+    .bet-handicap {
+        &__score {
+            width: 25px;
+            height: 25px;
+            font-size: 1.2rem;
+            border-radius: 4px;
+        }
+        &__title {
+            padding: 2px;
+            padding-bottom: 5px;
+            border-radius: 5px;
+            margin: 0 20px;
+            span {
+                font-size: 1rem;
+            }
+        }
+    }
+    .bet-team {
+        max-height: 100px;
+        min-height: 100px;
+        &_home {
+            &::after {
+                display: none;
+            }
+        }
+        &_away {
+            &::after {
+                display: none;
+            }
+        }
+        &__people {
+            margin-top: -15px;
+            &_home {
+                left: 30%;
+            }
+            &_away {
+                right: 30%;
+            }
+        }
+        &__button-people {
+            width: 50px;
+            height: 25px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            span {
+                padding: 1px;
+            }
+        }
+        &__people-number {
+            padding-top: 3px !important;
+        }
+        &__logo-container {
+            flex: initial;
+        }
+        &__logo {
+            img {
+                width: 60px;
+                height: 60px;
+            }
+        }
+        &__score {
+            font-size: 3rem;
+            width: 60px;
+            height: 60px;
+            padding-top: 0px;
+        }
+    }
+    .draw {
+        min-width: 60px;
+        height: 75px;
+        flex: 1 0 40px;
+        &__label {
+            top: 25px;
+            font-size: 0.8rem;
+        }
+    }
+    .team-choose {
+        &__flex-container {
+            width: 70px;
+            height: 40px;
+            span {
+                font-size: 0.6rem;
+            }
+        }
+    }
+    .bet-status {
+        &__match {
+            &_live {
+                margin-top: -10px;
+            }
+        }
+        &__match-title {
+            font-size: 0.8rem;
+            &_in-progress {
+                font-size: 1rem;
+            }
+            &_ended {
+                font-size: 1rem;
+                margin-top: -10px;
+            }
+        }
+    }
+}
